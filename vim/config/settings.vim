@@ -1,7 +1,7 @@
 set encoding=utf-8
 
-syntax enable
-colorscheme default
+syntax on
+color dracula
 
 set backspace=indent,eol,start
 set fillchars=vert:\

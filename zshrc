@@ -19,7 +19,7 @@ ZSH_THEME="robbyrussell"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=7
@@ -129,10 +129,6 @@ alias aurinen='LC_ALL=C yaourt -S'
 alias Y='yaourt --noconfirm'
 alias aurinf='yaourt -Si'
 
-# neofetch
-
-# PATH="/home/stonedch/perl5/bin${PATH:+:${PATH}}"; export PATH;
-# PERL5LIB="/home/stonedch/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-# PERL_LOCAL_LIB_ROOT="/home/stonedch/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-# PERL_MB_OPT="--install_base \"/home/stonedch/perl5\""; export PERL_MB_OPT;
-# PERL_MM_OPT="INSTALL_BASE=/home/stonedch/perl5"; export PERL_MM_OPT;
+# Engaging Vi mode.
+bindkey -v
+export KEYTIMEOUT=1

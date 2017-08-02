@@ -92,22 +92,17 @@ alias clock="tty-clock -c"
 alias matrix="cmatrix"
 alias starwars="telnet towel.blinkenlights.nl"
 alias pipes="pipes"
-alias mpdn="ncmpcpp -S visualizer"
-#alias syua="pacaur -Syu"
-#alias syu="sudo pacman -Syu"
-alias merge="xrdb -merge ~/.Xresources"
-#alias ssh="ssh -p 22 stonedch@192.168.0.1"
+#alias ssh="ssh -p 22 stonedch@localhost"
 alias neo="neofetch"
 alias neoa="neofetch --ascii"
-alias play="ncmpcpp -S visualizer"
 alias font="sudo fc-cache -f -v"
-#alias orp="sudo pacman -Rns $(pacman -Qtdq)"
+#alias vim="nvim"
 
 ## PACMAN 
 alias update='sudo pacman -Syyu'
 alias install='sudo pacman -S'
 alias search='pacman -Ss'
-alias remove='sudo pacman -Rns'
+alias remove='sudo pacman -Rcns'
 alias clean='sudo pacman -Scc'
 alias orphan='sudo pacman -Rs $(pacman -Qtdq)'
 alias stayonmypc='sudo pacman -D --asexp'

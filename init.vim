@@ -3,16 +3,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Python
-Plug 'klen/python-mode', { 'for': 'python' }
-Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 "Themes
 Plug 'ryanoasis/vim-devicons'
 Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
-Plug 'jacoborus/tender.vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-solarized8'
 "Markdown
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -76,13 +69,3 @@ map <C-n> :NERDTreeToggle<CR>
 set timeoutlen=1000
 "set ttimeout
 set ttimeoutlen=50
-
-"Python settings
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-let g:pymode_virtualenv = 1
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_ignore="E501,W601,C0110"

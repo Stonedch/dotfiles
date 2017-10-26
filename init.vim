@@ -2,13 +2,10 @@ call plug#begin('~/.vim/plugged')
 "Common
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 "Themes
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'altercation/vim-colors-solarized'
-Plug 'lifepillar/vim-solarized8'
-"Markdown
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 call plug#end()
 
 " Settings
@@ -69,3 +66,6 @@ map <C-n> :NERDTreeToggle<CR>
 set timeoutlen=1000
 "set ttimeout
 set ttimeoutlen=50
+
+"Display special characters
+set list listchars=tab:→\ ,trail:·

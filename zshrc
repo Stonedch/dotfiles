@@ -1,129 +1,21 @@
 export TERM="xterm-256color" 
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
 
-# Path to your oh-my-zsh installation.
-export ZSH=/home/stonedch/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+export LANG=ru_RU.UTF-8
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=14
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(zsh-autosuggestions git)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='vim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-#-----------------------------
-# Alias
-#-----------------------------
-alias pacman="pacman --color auto"
-alias ls="ls --color"
-alias weather="curl http://wttr.in"
-alias clock="tty-clock -c"
-alias matrix="cmatrix"
-alias starwars="telnet towel.blinkenlights.nl"
-alias pipes="pipes"
-#alias ssh="ssh -p 22 stonedch@localhost"
-alias neo="neofetch"
-alias neoa="neofetch --ascii"
-alias font="sudo fc-cache -f -v"
-#alias vim="nvim"
-
-## PACMAN 
-alias update='sudo pacman -Syyu'
-alias install='sudo pacman -S'
-alias search='pacman -Ss'
-alias remove='sudo pacman -Rcns'
-alias clean='sudo pacman -Scc'
-alias orphan='sudo pacman -Rs $(pacman -Qtdq)'
-alias stayonmypc='sudo pacman -D --asexp'
-alias fuckoff='sudo pacman -D --asdep'
-alias pacinf='pacman -Si'
-alias searchlocal='pacman -Qs'
-alias listfiles='pacman -Ql'
-alias whoisorphan='pacman -Qdt'
-alias upmirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
-alias paclog='tail -f /var/log/pacman.log'
-alias pacul='sudo rm /var/lib/pacman/db.lck'
-
-## YAOURT
-alias yorphan='yaourt -Qtd'
-alias aurin='yaourt -S'
-alias aurse='yaourt -Ss'
-alias aurup='yaourt -Syua'
-alias aurinen='LC_ALL=C yaourt -S'
-alias Y='yaourt --noconfirm'
-alias aurinf='yaourt -Si'
 
 # Engaging Vi mode.
 bindkey -v
 export KEYTIMEOUT=1
+
+# Alias
+alias pacman="pacman --color auto"
+alias ls="ls --color"
+alias myip="curl http://ipecho.net/plain; echo"
+

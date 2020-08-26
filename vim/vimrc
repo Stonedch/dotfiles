@@ -1,11 +1,14 @@
+" Plugins
 call plug#begin('~/.vim/plugged')
-"Common
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-"Themes
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Settings
@@ -13,10 +16,14 @@ set autoread
 syntax enable
 set t_Co=256
 
-colorscheme solarized
+set nowrap
+
+colorscheme gruvbox
 set background=dark
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:h14
+hi! Normal ctermbg=NONE guibg=NONE
+
+set guifont=Hack\ Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:h14
 
 set tabstop=4
 set shiftwidth=4
@@ -38,7 +45,7 @@ set nocompatible
 
 set backspace=indent,eol,start
 
-let g:mapleader = ','
+let g:mapleader=','
 
 set noerrorbells
 set novisualbell
@@ -54,18 +61,43 @@ set hlsearch
 set incsearch
 set showmatch
 
-"Airline options
+" Gruvbox options
+let g:gruvbox_contrast='hard'
+let g:gruvbox_contrast_dark='hard'
+
+" Airline options
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 
-"Open NERDTree with Ctrl-n
+" Gitgutter options
+set updatetime=250
+let g:gitgutter_max_signs=500
+let g:gitgutter_map_keys=0
+let g:gitgutter_override_sign_column_highlight=0
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+highlight GitGutterChangeDelete ctermfg=4
+
+" FZF options
+let g:fzf_preview_window = ''
+let g:fzf_preview_window = 'right:60%'
+map <C-f> :Files<CR>
+
+" NERDTree options
+let NERDTreeQuitOnOpen=1
 map <C-n> :NERDTreeToggle<CR>
-"set timeout
+
+" Clear last search highlighting
+map <Space> :noh<cr>
+
+" set timeout
 set timeoutlen=1000
-"set ttimeout
+" set ttimeout
 set ttimeoutlen=50
 
-"Display special characters
+" Display special characters
 set list listchars=tab:→\ ,trail:·

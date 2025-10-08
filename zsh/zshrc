@@ -1,0 +1,20 @@
+export TERM="xterm-256color" 
+
+export ZSH=$HOME/.ohmyzsh
+
+ZSH_THEME="robbyrussell"
+
+export LANG=ru_RU.UTF-8
+
+plugins=(zsh-autosuggestions git)
+
+source $ZSH/oh-my-zsh.sh
+
+# Engaging Vi mode.
+bindkey -v
+export KEYTIMEOUT=1
+
+# Alias
+alias pacman="pacman --color auto"
+alias ls="ls --color"
+alias myip="curl http://ipecho.net/plain; echo"

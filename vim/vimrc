@@ -1,52 +1,26 @@
-" Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
-Plug 'mattn/emmet-vim'
-call plug#end()
-
-" Settings
+set encoding=UTF-8
 set autoread
 syntax enable
 set t_Co=256
-
 set nowrap
-
-colorscheme gruvbox
 set background=dark
-
 hi! Normal ctermbg=NONE guibg=NONE
-
 set guifont=Hack\ Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:h14
-
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
 set number
-
 set nocursorline
 set nocursorcolumn
 syntax sync minlines=256
-
 set wildmenu
 set hidden
 set cmdheight=1
-
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
-
 set nocompatible
-
 set backspace=indent,eol,start
-
 let g:mapleader=','
-
 set noerrorbells
 set novisualbell
 set noswapfile
@@ -54,50 +28,12 @@ set nobackup
 set splitright
 set splitbelow
 set fileformats=unix,dos,mac
-
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch
 set showmatch
-
-" Gruvbox options
-let g:gruvbox_contrast='hard'
-let g:gruvbox_contrast_dark='hard'
-
-" Airline options
-let g:airline_powerline_fonts=1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_theme='gruvbox'
-
-" Gitgutter options
-set updatetime=250
-let g:gitgutter_max_signs=500
-let g:gitgutter_map_keys=0
-let g:gitgutter_override_sign_column_highlight=0
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
-highlight GitGutterChangeDelete ctermfg=4
-
-" FZF options
-let g:fzf_preview_window = ''
-let g:fzf_preview_window = 'right:60%'
-map <C-f> :Files<CR>
-
-" NERDTree options
-let NERDTreeQuitOnOpen=1
-map <C-n> :NERDTreeToggle<CR>
-
-" Clear last search highlighting
 map <Space> :noh<cr>
-
-" set timeout
 set timeoutlen=1000
-" set ttimeout
 set ttimeoutlen=50
-
-" Display special characters
 set list listchars=tab:→\ ,trail:·
